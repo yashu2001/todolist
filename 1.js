@@ -63,12 +63,12 @@ document.addEventListener('DOMContentLoaded', function () {
             let tl=document.querySelector('#tasklist');
             tl.style.display="block";
             let ul=tl.children[0];
-            let li=document.createElement('li');
-            li.className='z-depth-2';
-            li.innerHTML=`<a href='#' class="right" name='delete' id='${task_name.value}'><i class="material-icons" style='color:red'>close</i></a>${task_name.value}`;
-            ul.appendChild(li);
             let tasks=localStorage.getItem('tasks');
             if(tasks===null){
+                let li=document.createElement('li');
+                li.className='z-depth-2';
+                li.innerHTML=`<a href='#' class="right" name='delete' id='${task_name.value}'><i class="material-icons" style='color:red'>close</i></a>${task_name.value}`;
+                ul.appendChild(li);
                 tasks=[];
                 tasks.push({
                     name:`${task_name.value}`,
@@ -77,10 +77,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 localStorage.setItem('tasks',JSON.stringify(tasks));
             }
             else{
-                document.querySelector('.default').style.display="none";
-                let tl=document.querySelector('#tasklist');
-                tl.style.display="block";
-                let ul=tl.children[0];
                 let li=document.createElement('li');
                 li.className='z-depth-2';
                 li.innerHTML=`<a href='#' class="right" name='delete' id='${task_name.value}'><i class="material-icons" style='color:red'>close</i></a>${task_name.value}`;
