@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     clrbtn.addEventListener('click',clrall);
     //EVENT HANDLER FOR clear all
     function clrall(e){
+        document.querySelector('#task-list').innerHTML='';
         localStorage.removeItem('tasks');
         backToDefault();
     }
