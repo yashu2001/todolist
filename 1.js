@@ -93,7 +93,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 localStorage.setItem('tasks',JSON.stringify(tasks));
             }
             task_name.value='';
-            location.reload();
         }
         e.preventDefault();
     }
