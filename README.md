@@ -1,1 +1,1 @@
-"# todolist" 
+This is a simple todolist application made with vanill javascript, this project helped me to understand the basics of dom manipulation along with using the local storage api for storing data on the client side
